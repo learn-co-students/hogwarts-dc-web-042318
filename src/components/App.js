@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import Nav from './Nav'
 import hogs from '../porkers_data';
+import Hog
 
 class App extends Component {
   render() {
