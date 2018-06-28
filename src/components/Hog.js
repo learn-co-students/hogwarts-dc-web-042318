@@ -1,31 +1,26 @@
 import React from "react";
 
-class Hog extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
+const Hog = props => {
+  return (
     <div className="ui card">
-    <div class="image">
-       <img src="{this.props.image}" />
+      <div className="image">
+        <img src={props.image_path} />
       </div>
-  <div className="content"><a className="header">{this.props.name}</a>
-    <div className="meta">
-      <span className="date">{this.props.specialty}</span>
+      <div className="content">
+        <a className="header">{props.name}</a>
+        <div className="meta">
+          <span className="date">{props.specialty}</span>
+        </div>
+        <div className="description">
+          Weight: {props.weight} <br />
+          Highest Medal Achieved: {props.medal}
+        </div>
+      </div>
+      <div className="extra content">
+        Greased: {props.greased ? "yes" : "no"}
+      </div>
     </div>
-    <div className="description">
-    		Weight: {this.props.weight}	<br />
-    		Highest Medal Achieved: {this.props.medal}
-    </div>
-  </div>
-  <div className="extra content">
-  Greased: {this.props.greased ? "yes": "no"}
-  </div>
-</div>
- 	);
- 	 }
-}
+  );
+};
 
 export default Hog;
