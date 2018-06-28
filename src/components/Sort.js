@@ -18,9 +18,10 @@ class Sort extends React.Component {
           </select>
         </div>
         <div className="inline field item">
-          <div className="ui toggle checkbox">
-            <label>Greased?</label>
-            <input type="checkbox" tabindex="0" class="hidden" />
+                    <div className="ui buttons">
+           <button className="ui button" value={true} onClick={this.props.greased}>Greased</button>
+           <div className="or"></div>
+           <button className="ui button" value={false} onClick={this.props.greased}>Not Greased</button>
           </div>
         </div>
       </div>
