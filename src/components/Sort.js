@@ -9,13 +9,12 @@ class Sort extends React.Component {
     return (
       <div className="ui borderless main menu">
         <div className="field item">
-          <select className="ui fluid dropdown">
-            <option value="">Name</option>
-          </select>
-        </div>
-        <div className="field item">
-          <select className="ui fluid dropdown">
-            <option value="">Weight</option>
+          <select className="ui fluid dropdown" onChange={this.props.sortFunc}>
+            <option value="" disabled selected>
+              Sort Pigs!
+            </option>
+            <option value="name">Name</option>
+            <option value="weight">Weight</option>
           </select>
         </div>
         <div className="inline field item">
