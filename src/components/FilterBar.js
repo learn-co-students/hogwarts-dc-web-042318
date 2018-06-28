@@ -9,15 +9,20 @@ class FilterBar extends Component {
     return (
       <div>
         <form>
-          Sort By:
-          <select onChange={e => this.props.handleSort(e.target.value)} defaultValue="" >
-            <option value="" disabled> </option>
+          <select
+            className="ui selection dropdown"
+            onChange={e => this.props.handleSort(e.target.value)}
+            defaultValue=""
+          >
+            <option value="">Not Sorted</option>
             <option value="name">name</option>
             <option value="weight">weight</option>
           </select>
-          <br />
-          Filter:
-          <select onChange={e => this.props.handleFilter(e.target.value)} defaultValue="both">
+          <select
+            className="ui selection dropdown"
+            onChange={e => this.props.handleFilter(e.target.value)}
+            defaultValue="both"
+          >
             <option value="both">both</option>
             <option value="greased">greased</option>
             <option value="not greased">not greased</option>
