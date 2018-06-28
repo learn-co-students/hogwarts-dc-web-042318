@@ -1,16 +1,12 @@
 import React from "react";
 import Hog from "./Hog.js";
 
-class HogsBrowser extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <div className="ui three column grid">
-        <br />
-        {this.props.hogs.map(hog => (
+const HogsBrowser = props => {
+  return (
+    <div className="ui three column grid">
+      <br />
+      {props.hogs.map(hog => (
+        <div className="ui card" key={hog.name + hog.weight}>
           <Hog
             name={hog.name}
             specialty={hog.specialty}
@@ -19,10 +15,10 @@ class HogsBrowser extends React.Component {
             medal={hog.medal}
             image_path={hog.image_path}
           />
-        ))}
-      </div>
-    );
-  }
-}
+        </div>
+      ))}
+    </div>
+  );
+};
 
 export default HogsBrowser;
