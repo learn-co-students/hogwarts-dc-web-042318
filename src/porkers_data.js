@@ -4,7 +4,7 @@ const hogs = [
     specialty: 'Mediocre magic',
     greased: false,
     weight: 2.0,
-    medal: 'bronze'
+    medal: 'bronze',
   },
   {
     name: 'Porkchop',

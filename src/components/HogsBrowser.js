@@ -9,14 +9,15 @@ class HogsBrowser extends React.Component {
   render() {
     return (
        <div className="ui three column grid">
-{this.props.hogs.map(hog => 
+       <br />
+       {this.props.hogs.map(hog => 
           <Hog 
           name={hog.name} 
           specialty={hog.specialty} 
           greased={hog.greased} 
           weight={hog.weight} 
           medal={hog.medal} />)}
-</div>
+      </div>
     );
   }
 }
